@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GG Nexus | Gaming News, Reviews, Podcasts & Esports</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&displaye>
+
+:root{
+--bg:#0b0b0d;
+--card:#15171c;
+--accent:#e60023;
+--text:#ffffff;
+--muted:#a7a7a7;
+--border:#262a33;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:90%;
+max-width:1400px;
+margin:auto;
+}
+
+.topbar{
+background:#111;
+padding:10px 0;
+font-size:.9rem;
+color:#ddd;
+border-bottom:1px solid var(--border);
+}
+
+.breaking{
+color:var(--accent);
+font-weight:700;
+margin-right:10px;
+}
+
+nav{
+background:#0f1115;
+position:sticky;
+top:0;
+z-index:999;
+border-bottom:1px solid var(--border);
+}
+
+.nav-wrapper{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:18px 0;
+}
+
+.logo{
+font-size:2rem;
+font-weight:800;
+color:var(--accent);
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+font-weight:600;
+}
+
+.hero{
+height:650px;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.85)),
+url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1800&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:flex-end;
+}
+
+.hero-content{
+padding:60px;
+max-width:900px;
+}
+
+.hero-tag{
+background:var(--accent);
+display:inline-block;
+padding:6px 12px;
+font-size:.8rem;
+font-weight:700;
+border-radius:4px;
+margin-bottom:15px;
+}
+
+.hero h1{
+font-size:3.8rem;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:1.2rem;
+color:#ddd;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+background:var(--accent);
+padding:14px 25px;
+border-radius:6px;
+font-weight:700;
+}
+
+section{
+padding:60px 0;
+}
+
+.section-title{
+font-size:2rem;
+margin-bottom:30px;
+font-weight:800;
+}
+
+.news-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:20px;
+}
+
+.card{
+background:var(--card);
+border-radius:12px;
+overflow:hidden;
+border:1px solid var(--border);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+}
+
+.card img{
+width:100%;
+display:block;
+}
+
+.card-content{
+padding:20px;
+}
+
+.category{
+color:var(--accent);
+font-size:.8rem;
+font-weight:700;
+margin-bottom:10px;
+display:block;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.muted{
+color:var(--muted);
+}
+
+.podcast-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.episode{
+background:var(--card);
+padding:25px;
+border-radius:12px;
+border:1px solid var(--border);
+}
+
+.listen-btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 18px;
+background:var(--accent);
+border-radius:6px;
+font-weight:600;
+}
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.review-score{
+font-size:2rem;
+font-weight:800;
+color:#00ff88;
+margin-bottom:10px;
+}
+
+.release-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.release{
+background:var(--card);
+padding:20px;
+border-radius:10px;
+border:1px solid var(--border);
+}
+
+.community{
+background:linear-gradient(135deg,#e60023,#7d0c20);
+padding:80px 40px;
+border-radius:18px;
+text-align:center;
+}
+
+.community h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.newsletter{
+margin-top:25px;
+}
+
+.newsletter input{
+padding:15px;
+width:350px;
+max-width:100%;
+border:none;
+border-radius:8px;
+}
+
+.newsletter button{
+padding:15px 25px;
+border:none;
+background:#111;
+color:white;
+margin-left:10px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.footer{
+background:#090909;
+padding:50px 0;
+margin-top:60px;
+border-top:1px solid var(--border);
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.footer h4{
+margin-bottom:15px;
+}
+
+.footer ul{
+list-style:none;
+}
+
+.footer li{
+margin-bottom:8px;
+color:#bbb;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:2.4rem;
+}
+
+.news-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+<div class="container">
+<span class="breaking">BREAKING:</span>
+Major open-world RPG announces expansion and cross-platform multiplayer support.
+</div>
+</div>
+
+<nav>
+<div class="container nav-wrapper">
+<div class="logo">GG NEXUS</div>
+
+<div class="nav-links">
+#News</a>
+<aeviews</a>
+#Podcast</a>
+<a hrefs</a>
+#Guides</a>
+<aideos</a>
+</div>
+</div>
+</nav>
+
+<header class="hero">
+
+<div class="hero-content">
+
+<span class="hero-tag">FEATURED STORY</span>
+
+<h1>
+The Future of Gaming: AI, Cloud Streaming, and the Next Generation of Esports
+</h1>
+
+<p>
+Exclusive interviews, expert reviews, esports coverage,
+and gaming podcasts trusted by thousands of gamers worldwide.
+</p>
+
+<a href="#" class="btn">
+Read Fullheader>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Top Stories
+</h2>
+
+<div class="news-grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200">
+card-content">
+<span class="category">NEWS</span>
+<h3>Everything Revealed During This Month's Gaming Showcase</h3>
+<p class="muted">
+All announcements, trailers and release dates in one place.
+</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800s="card-content">
+<span class="category">ESPORTS</span>
+<h3>Top Teams Prepare For World Championship</h3>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550745165-9bc0b252726iv class="card-content">
+<span class="category">REVIEWS</span>
+<h3>Our First Look At The Year's Biggest Shooter</h3>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Latest Podcast Episodes
+</h2>
+
+<div class="podcast-grid">
+
+<div class="episode">
+<h3>Episode #145</h3>
+<p>
+The future of cloud gaming and whether consoles can survive the next decade.
+</p>
+#Listen</a>
+</div>
+
+<div class="episode">
+<h3>Episode #144</h3>
+<p>
+The rise of esports organizations and the business behind tournaments.
+</p>
+#Listen</a>
+</div>
+
+<div class="episode">
+<h3>Episode #143</h3>
+<p>
+Game developers discuss AI-assisted game design.
+</p>
+#Listen</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Latest Reviews
+</h2>
+
+<div class="reviews">
+
+<div class="episode">
+<div class="review-score">9.4</div>
+<h3>Cyber Assault Infinity</h3>
+<p>Outstanding multiplayer experience.</p>
+</div>
+
+<div class="episode">
+<div class="review-score">8.8</div>
+<h3>Kingdoms Reborn II</h3>
+<p>Massive world and excellent storytelling.</p>
+</div>
+
+<div class="episode">
+<div class="review-score">9.1</div>
+<h3>Velocity Racing X</h3>
+<p>One of the best racing games released this year.</p>
+</div>
+
+<div class="episode">
+<div class="review-score">8.5</div>
+<h3>Shadow Protocol</h3>
+<p>Strong tactical combat with memorable missions.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Upcoming Releases
+</h2>
+
+<div class="release-grid">
+
+<div class="release">
+<h3>Galaxy Frontier Online</h3>
+<p>Release: November 15</p>
+</div>
+
+<div class="release">
+<h3>Legends of Valor</h3>
+<p>Release: December 2</p>
+</div>
+
+<div class="release">
+<h3>Titan Warfare</h3>
+<p>Release: December 20</p>
+</div>
+
+<div class="release">
+<h3>Project Eclipse</h3>
+<p>Release: January 10</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="community">
+
+<h2>Join The GG Nexus Community</h2>
+
+<p>
+Get gaming news, exclusive podcast episodes,
+giveaways, and esports coverage directly to your inbox.
+</p>
+
+<div class="newsletter">
+
+<input type="email" placeholder="Enter your email">
+
+<button>
+Subscribe
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+<h4>GG Nexus</h4>
+<ul>
+<li>Gaming News</li>
+<li>Reviews</li>
+<li>Podcasts</li>
+<li>Esports</li>
+</ul>
+</div>
+
+<div>
+<h4>Community</h4>
+<ul>
+<li>Discord</li>
+<li>YouTube</li>
+<li>Twitch</li>
+<li>X</li>
+</ul>
+</div>
+
+<div>
+<h4>Resources</h4>
+<ul>
+<li>Newsletter</li>
+<li>Advertising</li>
+<li>Sponsors</li>
+<li>Contact</li>
+</ul>
+</div>
+
+<div>
+<h4>Legal</h4>
+<ul>
+<li>Privacy Policy</li>
+<li>Terms</li>
+<li>Cookies</li>
+<li>Support</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
